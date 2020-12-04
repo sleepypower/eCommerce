@@ -49,13 +49,11 @@ class Valoracion(models.Model):
     Texto = models.CharField(max_length=20, null = False)
     #Correo_Usuario = models.ForeignKey("Usuario", on_delete=models.CASCADE)
 
-"""
-class Carrito(models.Model):
-    id = models.IntegerField(primary_key= True)
-    Precio_total = models.IntegerField()
-    id_juego = models.ForeignKey("Juego", on_delete=models.CASCADE)
-    Correo_Usuario = models.ForeignKey("Usuario", on_delete=models.CASCADE)
-"""
+
+class Carrito(models.Model):    
+    id_juego = models.ForeignKey("Juego" , on_delete=models.CASCADE)
+    id_usuario = models.OneToOneField("Usuario" , on_delete=models.CASCADE)
+
 
 class Factura(models.Model):
     id_factura = models.AutoField(primary_key= True)
@@ -86,5 +84,3 @@ class Factura_juego(models.Model):
     Valor = models.FloatField(null=False)
     id_juego = models.ForeignKey("Juego", on_delete = models.CASCADE)
     id_factura = models.ForeignKey("Factura", on_delete = models.CASCADE)
-
-

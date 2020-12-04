@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+{% block header %}
+<h1>Tienda de Videojuegos Online</h1>
+<h2>Área para Admins</h2>
+
+<p>
+    Bienvenido <b>{{request.user.username}}</b>, 
+    esta página es exclusiva para usuarios registrados por medio de la barra puedes acceder a la lista de juegos.
+</p>
+
+<hr />
+<a href="http://127.0.0.1:8000/accounts/logout">Cerrar sesión</a>
+{% endblock %}

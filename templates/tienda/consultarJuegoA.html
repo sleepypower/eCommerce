@@ -1,5 +1,4 @@
-{% extends 'base/base.html' %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% extends 'base/baseAdmin.html' %}
 {% block content %}
 <table class="table table-dark">
  <thead>
@@ -18,7 +17,7 @@
  <td>{{ juego.Titulo }}</td>
  <td>{{ juego.Fecha_Publicacion }}</td>
  <td>{{ juego.Precio }}</td>
- 
+
  </tr>
  {% endfor %}
 
